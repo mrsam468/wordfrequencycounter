@@ -13,7 +13,7 @@ public class Main {
         System.out.println("write down you sentence : ");
         String paragraph = scanner.nextLine();
         try {
-            textAnalyzer.wordSortedAlphabetically(paragraph);
+            System.out.println(textAnalyzer.wordSortedAlphabetically(paragraph));
         } catch (ParagraphIsEmptyException e) {
             System.out.println(e.getMessage());
         }
