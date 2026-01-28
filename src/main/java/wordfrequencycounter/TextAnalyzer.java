@@ -42,7 +42,8 @@ public class TextAnalyzer {
     public List<String> wordSortedAlphabetically(String paragraph) throws ParagraphIsEmptyException {
         TextAnalyzer wordCount = new TextAnalyzer();
         Map<String, Integer> words = wordCount.wordCount(paragraph);
-        List<String> wordSortedAlphabeticallyList = new ArrayList<>(words.keySet());
+        List<String> wordSortedAlphabeticallyList = new ArrayList<>();
+        wordSortedAlphabeticallyList.addAll(words.keySet());
         Collections.sort(wordSortedAlphabeticallyList);
         return wordSortedAlphabeticallyList;
     }
