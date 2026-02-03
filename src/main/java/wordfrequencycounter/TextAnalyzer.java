@@ -3,12 +3,11 @@ package wordfrequencycounter;
 import exceptions.ParagraphIsEmptyException;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TextAnalyzer {
-    private static List<String> paragraphList = new ArrayList<>();
 
     private static List<String> addToParagraphList(String paragraph) throws ParagraphIsEmptyException {
+        List<String> paragraphList = new ArrayList<>();
         if (paragraph.isEmpty()) {
             throw new ParagraphIsEmptyException("please enter a valid sentence");
         }
@@ -29,7 +28,7 @@ public class TextAnalyzer {
         return wordCount;
     }
 
-    public List<String> wordSortedFrequency(String paragraph) throws ParagraphIsEmptyException {
+    public List<String> wordSortedInFrequency(String paragraph) throws ParagraphIsEmptyException {
         TextAnalyzer wordCount = new TextAnalyzer();
         Map<String, Integer> words = wordCount.wordCount(paragraph);
         List<Map.Entry<String, Integer>> sortedMap = words.entrySet().stream()

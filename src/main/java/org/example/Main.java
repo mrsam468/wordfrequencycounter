@@ -14,6 +14,8 @@ public class Main {
         String paragraph = scanner.nextLine();
         try {
             System.out.println(textAnalyzer.wordSortedAlphabetically(paragraph));
+            textAnalyzer.wordCount(paragraph);
+            textAnalyzer.wordSortedAlphabetically(paragraph);
         } catch (ParagraphIsEmptyException e) {
             System.out.println(e.getMessage());
         }

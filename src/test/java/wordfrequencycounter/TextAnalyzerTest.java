@@ -112,7 +112,7 @@ class TextAnalyzerTest {
         wordCount.add("on");
 
 //        Then
-        assertEquals(wordCount, textAnalyzer.wordSortedFrequency(word));
+        assertEquals(wordCount, textAnalyzer.wordSortedInFrequency(word));
     }
 
     @Test
@@ -143,7 +143,7 @@ class TextAnalyzerTest {
 
 
 //        Then
-        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedFrequency(word);});
+        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedInFrequency(word);});
 
     }
 
@@ -205,7 +205,7 @@ class TextAnalyzerTest {
 
 
 //        Then
-        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedFrequency(word);});
+        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedInFrequency(word);});
 
     }
 }
