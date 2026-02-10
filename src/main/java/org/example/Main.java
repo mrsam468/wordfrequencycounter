@@ -7,7 +7,7 @@ import wordfrequencycounter.TextAnalyzer;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         TextAnalyzer textAnalyzer = new TextAnalyzer();
         Scanner scanner = new Scanner(System.in);
         String paragraph = scanner.nextLine();

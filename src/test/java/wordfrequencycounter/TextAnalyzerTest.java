@@ -21,13 +21,13 @@ class TextAnalyzerTest {
         paragraph = "samuel and favour were eating and favour pickedup the plate of food and disposed it and samuel got angry and slap him on his head";
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void wordCount() throws ParagraphIsEmptyException {
 //        When
         Map<String, Integer> wordCount = textAnalyzer.wordCount(paragraph);
 
 //        Then
-        assertEquals(2,wordCount.get("samuel"));
+        assertEquals(2, wordCount.get("samuel"));
     }
 
     @Test
@@ -57,7 +57,9 @@ class TextAnalyzerTest {
         String word = "";
 
 //        Then
-        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedByFrequency(word);});
+        assertThrows(ParagraphIsEmptyException.class, () -> {
+            textAnalyzer.wordSortedByFrequency(word);
+        });
 
     }
 
@@ -72,8 +74,9 @@ class TextAnalyzerTest {
 
         assertEquals("and", actual.getFirst());
     }
+
     @Test
-    void wordSortedAlphabeticallyException () throws ParagraphIsEmptyException {
+    void wordSortedAlphabeticallyException() throws ParagraphIsEmptyException {
 
         //        Given
 
@@ -81,7 +84,9 @@ class TextAnalyzerTest {
 
 //      Then
 
-        assertThrows(ParagraphIsEmptyException.class, () -> {textAnalyzer.wordSortedAlphabetically(word);});
+        assertThrows(ParagraphIsEmptyException.class, () -> {
+            textAnalyzer.wordSortedAlphabetically(word);
+        });
 
     }
 }
