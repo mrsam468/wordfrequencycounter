@@ -9,7 +9,7 @@ import java.util.Map;
 public class WordSorter {
     WordCounter wordCounter = new WordCounter();
 
-    public List<String> Frequency(String paragraph) throws ParagraphIsEmptyException {
+    protected List<String> Frequency(String paragraph) throws ParagraphIsEmptyException {
 
         Map<String, Integer> wordCount = wordCounter.wordCount(paragraph);
         List<String> result = new ArrayList<>(wordCount.keySet());
@@ -26,7 +26,7 @@ public class WordSorter {
     }
 
 
-    public List<String> Alphabetical(String paragraph) throws ParagraphIsEmptyException {
+    protected List<String> Alphabetical(String paragraph) throws ParagraphIsEmptyException {
         Map<String, Integer> wordCount = wordCounter.wordCount(paragraph);
         List<String> result = new ArrayList<>(wordCount.keySet());
         for (int i = 0; i < result.size(); i++) {

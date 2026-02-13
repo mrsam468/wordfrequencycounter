@@ -6,7 +6,7 @@ import java.util.*;
 
 public class WordCounter {
 
-    public Map<String, Integer> wordCount(String paragraph) throws ParagraphIsEmptyException {
+    protected Map<String, Integer> wordCount(String paragraph) throws ParagraphIsEmptyException {
         if (paragraph.isEmpty()) {
             throw new ParagraphIsEmptyException("please send in a valid paragraph");
         }
