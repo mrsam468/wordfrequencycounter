@@ -2,13 +2,17 @@ package org.example;
 
 import exceptions.ParagraphIsEmptyException;
 import wordfrequencycounter.TextAnalyzer;
+import wordfrequencycounter.WordCounter;
+import wordfrequencycounter.WordSorter;
 
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        TextAnalyzer textAnalyzer = new TextAnalyzer();
+        WordCounter wordCounter = new WordCounter();
+        WordSorter wordSorter = new WordSorter();
+        TextAnalyzer textAnalyzer = new TextAnalyzer(wordCounter ,wordSorter);
         Scanner scanner = new Scanner(System.in);
         String paragraph = scanner.nextLine();
         try {

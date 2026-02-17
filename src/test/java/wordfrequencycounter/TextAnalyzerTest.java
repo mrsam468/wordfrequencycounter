@@ -16,7 +16,9 @@ class TextAnalyzerTest {
 
     @BeforeEach
     void init() {
-        textAnalyzer = new TextAnalyzer();
+        WordCounter wordCounter = new WordCounter();
+        WordSorter wordSorter = new WordSorter();
+        textAnalyzer = new TextAnalyzer(wordCounter,wordSorter);
         wordCount = new ArrayList<>();
         paragraph = "samuel and favour were eating and favour pickedup the plate of food and disposed it and samuel got angry and slap him on his head";
     }

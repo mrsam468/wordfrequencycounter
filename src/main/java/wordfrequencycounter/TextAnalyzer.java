@@ -5,19 +5,22 @@ import exceptions.ParagraphIsEmptyException;
 import java.util.*;
 
 public class TextAnalyzer {
+    private WordCounter wordCounter;
+    private WordSorter wordSorter;
+    public TextAnalyzer(WordCounter wordCounter,WordSorter wordSorter){
+        this.wordCounter = wordCounter;
+        this.wordSorter = wordSorter;
+    }
     public Map<String, Integer> wordCount(String paragraph) throws ParagraphIsEmptyException {
-        WordCounter wordCounter = new WordCounter();
         return wordCounter.wordCount(paragraph);
     }
 
     public List<String> wordSortedByFrequency(String paragraph) throws ParagraphIsEmptyException {
-        WordSorter wordSorter = new WordSorter();
-        return wordSorter.Frequency(paragraph);
+        return wordSorter.sortWordsByFrequency(paragraph);
     }
 
     public List<String> wordSortedAlphabetically(String paragraph) throws ParagraphIsEmptyException {
-        WordSorter wordSorter = new WordSorter();
-        return wordSorter.Alphabetical(paragraph);
+        return wordSorter.sortWordsAlphabetically(paragraph);
     }
 
 }
