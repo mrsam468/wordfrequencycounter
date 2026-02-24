@@ -11,8 +11,7 @@ public class WordCounter {
             throw new ParagraphIsEmptyException("please send in a valid paragraph");
         }
         String organisedString = paragraph.replaceAll("\\p{Punct}", "");
-        String[] wordArr = organisedString.split("\\s+");
-        List<String> words = new ArrayList<>(List.of(wordArr));
+        String[] words = organisedString.split("\\s+");
         Map<String, Integer> wordCount = new HashMap<>();
         for (String word : words) {
             if (wordCount.containsKey(word)) {

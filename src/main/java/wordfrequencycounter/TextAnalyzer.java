@@ -5,8 +5,8 @@ import exceptions.ParagraphIsEmptyException;
 import java.util.*;
 
 public class TextAnalyzer {
-    private WordCounter wordCounter;
-    private WordSorter wordSorter;
+    private final WordCounter wordCounter;
+    private final WordSorter wordSorter;
     public TextAnalyzer(WordCounter wordCounter,WordSorter wordSorter){
         this.wordCounter = wordCounter;
         this.wordSorter = wordSorter;
