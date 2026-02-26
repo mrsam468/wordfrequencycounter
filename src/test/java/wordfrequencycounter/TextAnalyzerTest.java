@@ -65,7 +65,7 @@ class TextAnalyzerTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void wordSortedAlphabetically() throws ParagraphIsEmptyException {
 
 //        When
